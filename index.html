@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Cool Website</title>
+
+        <style>
+            img {
+                width: 500px;
+                height: auto;
+            }
+
+            h1 {
+                color: lightblue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>The Silent Princess</h1>
+        <p>A rare, endangered flower species.</p>
+
+        <img src="https://64.media.tumblr.com/dd489f571f10cddc981a21937657099d/tumblr_owb4abBIuY1unzyd3o1_1280.jpg">
+
+        <blockquote>The Silent Princess</blockquote>
+        <button onclick="changeQuote()">Information</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"I like html"`,
+                    `"I am enjoying my time at Hammer Hacks!" - Dave Smith-Hayes`,
+                    `"Zelda!"`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 3) {
+                    index = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
